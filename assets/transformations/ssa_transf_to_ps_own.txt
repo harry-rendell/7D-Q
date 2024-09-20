@@ -1,0 +1,8 @@
+# From deriving_ssa_transformations
+# B - g, x = g-r
+# V - g, x = g-r
+# R - r, x = r-i
+# I - i, x = r-i
+# (m * x) + c
+filtercode	m		c
+R	-0.193, -0.2078	
