@@ -44,7 +44,7 @@ if __name__ == "__main__":
                       'basepath': cfg.D_DIR + 'surveys/{}/{}/unclean/{}_band/'.format(survey, OBJ, band),
                       'ID':ID}
 
-            df = data_io.dispatch_reader(kwargs, multiproc=True)
+            df = data_io.dispatch_reader(kwargs)
 
             # Read in grouped data
             grouped = pd.read_csv(cfg.D_DIR + 'surveys/{}/{}/unclean/{}_band/grouped.csv'.format(survey, OBJ, band), usecols=[ID, 'mag_med','mag_std']).set_index(ID)

@@ -54,7 +54,7 @@ if __name__ == "__main__":
                       'basepath': cfg.D_DIR + f'surveys/{survey}/{OBJ}/clean/{band}_band/',
                       'usecols':[ID,'mjd','mag','magerr']}
             
-            df = data_io.dispatch_reader(kwargs, multiproc=True, max_processes=32).dropna()
+            df = data_io.dispatch_reader(kwargs, max_processes=32).dropna()
             if args.best_phot:
                 # File below is generated in grouped_analysis-NB.ipynb
                 subset = np.loadtxt(cfg.D_DIR + f'merged/{OBJ}/{phot_str}/best_phot_uids.csv', dtype=np.uint32)

@@ -60,7 +60,7 @@ def reader(fname, kwargs):
         
         return df
 
-def dispatch_reader(kwargs, multiproc=True, i=None, max_processes=64, concat=True, fnames=None, uids=None):
+def dispatch_reader(kwargs, i=None, max_processes=64, concat=True, fnames=None, uids=None):
     """
     Dispatching function for reader
     """
@@ -72,7 +72,7 @@ def dispatch_reader(kwargs, multiproc=True, i=None, max_processes=64, concat=Tru
             raise Exception('Cannot specify both i and fnames')
                 
         if isinstance(i, int):
-            fnames = fnames[i]
+            fnames = [fnames[i]]
             multiproc = False
         elif isinstance(i, np.ndarray):
             fnames = fnames[i]
@@ -82,6 +82,7 @@ def dispatch_reader(kwargs, multiproc=True, i=None, max_processes=64, concat=Tru
         fnames = find_lcs_containing_uids(uids, kwargs['basepath'])
         kwargs['uids'] = uids
     
+    # multiproc is deprecated, remove it 
     n_files = len(fnames)
     if __name__ == 'module.preprocessing.data_io':
         # Make as many tasks as there are files, unless we have set max_processes
