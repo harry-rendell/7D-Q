@@ -6,3 +6,5 @@
 - Zwicky Transient Facility (ZTF)
 
 This repository contains the code to access and query, and analyse photometry from the 7-DQ database
+
+temporary edit by Andy directly at Github
