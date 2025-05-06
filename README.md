@@ -9,3 +9,10 @@ several sky surveys, spanning 70 years in the observer frame.
 
 This repository contains the code to access and query, and analyse 
 photometry from the 7-DQ database
+
+# Data Access
+The data is available [here](http://cuillin.roe.ac.uk/~alawrence/7dq/) under the folder `data`
+
+# Getting started
+- Clone this repository into the same parent directory as `data/`
+- Run `notebooks/getting_started.ipynb` to see some example analysis
