@@ -11,7 +11,7 @@ This repository contains the code to access and query, and analyse
 photometry from the 7-DQ database
 
 ## Data Access
-The data is available [here](http://cuillin.roe.ac.uk/~alawrence/7dq/) under the folder `data`
+The data is available [here](http://cuillin.roe.ac.uk/~alawrence/7dq/) under the folder `data` (if you encounter `Page not found`, ensure that the protocol is http and not https)
 
 ## Getting started
 - Clone this repository into the same parent directory as `data/`
